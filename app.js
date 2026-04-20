@@ -103,13 +103,12 @@
 
 //  find all national teams
 
-db.collection("teams")
-  .where("country", "in", ["Spain"])
-  .where("city", "==", "Madrid")
-  .get()
-  .then((data) => {
-    let mydocs = data.docs;
-    mydocs.forEach((d) => {
-      console.log(d.data());
-    });
-  });
+// db.collection("teams")
+//   .where("teamName", "contains", "National")
+//   .get()
+//   .then((data) => {
+//     let mydocs = data.docs;
+//     mydocs.forEach((d) => {
+//       console.log(d.data());
+//     });
+//   });
