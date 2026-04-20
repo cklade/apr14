@@ -1,23 +1,3 @@
-// const teamInfo = {
-//   teamName: "Real Madrid",
-//   city: "Madrid",
-//   country: "Spain",
-//   topScorers: ["Ronaldo", "Benzema", "Hazard"],
-//   worldwideFans: 798, // in millions
-// };
-
-// console.log(teamInfo);
-
-// db.collection("teams")
-//   .doc("nQMvwLaK8inMbpKhPrsH")
-//   .update({
-//     teamName: "Real Madrid",
-//     city: "Madrid",
-//     country: "Spain",
-//     topScorers: ["Ronaldo", "Benzema", "Hazard"],
-//     worldwideFans: 798, // in millions
-//   });
-
 // const teams = [
 //   {
 //     id: "team1",
@@ -98,8 +78,34 @@
 
 // show all teams in spain
 
+// db.collection("teams")
+//   .where("country", "in", ["Spain"])
+//   .get()
+//   .then((data) => {
+//     let mydocs = data.docs;
+//     mydocs.forEach((d) => {
+//       console.log(d.data());
+//     });
+//   });
+
+// finding all teams in spain and madrid
+
+// db.collection("teams")
+//   .where("country", "in", ["Spain"])
+//   .where("city", "==", "Madrid")
+//   .get()
+//   .then((data) => {
+//     let mydocs = data.docs;
+//     mydocs.forEach((d) => {
+//       console.log(d.data());
+//     });
+//   });
+
+//  find all national teams
+
 db.collection("teams")
   .where("country", "in", ["Spain"])
+  .where("city", "==", "Madrid")
   .get()
   .then((data) => {
     let mydocs = data.docs;
