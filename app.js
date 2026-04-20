@@ -112,3 +112,15 @@
 //       console.log(d.data());
 //     });
 //   });
+
+// find all team not in spain
+
+// db.collection("teams")
+//   .where("country", "not-in", ["Spain"])
+//   .get()
+//   .then((data) => {
+//     let mydocs = data.docs;
+//     mydocs.forEach((d) => {
+//       console.log(d.data());
+//     });
+//   });
