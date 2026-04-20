@@ -135,3 +135,15 @@
 //       console.log(d.data());
 //     });
 //   });
+
+// find all teams in spain with more than 700 fans
+db.collection("teams")
+  .where("country", "==", "Spain")
+  .where("worldwideFans", ">", 700)
+  .get()
+  .then((data) => {
+    let mydocs = data.docs;
+    mydocs.forEach((d) => {
+      console.log(d.data());
+    });
+  });
