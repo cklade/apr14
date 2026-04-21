@@ -209,3 +209,71 @@
 //       console.log(d.data());
 //     });
 //   });
+
+// Update teams
+
+// db.collection("teams").doc("team1").update({
+//   teamName: "Real Madrid FC",
+//   worldwideFans: 811,
+// });
+
+// db.collection("teams").doc("team2").update({
+//   teamName: "Barcelona FC",
+//   worldwideFans: 747,
+// });
+
+// Remove top scorers
+
+// db.collection("teams")
+//   .doc("team1")
+//   .update({
+//     topScorers: firebase.firestore.FieldValue.arrayRemove("Hazard"),
+//   });
+
+// db.collection("teams")
+//   .doc("team1")
+//   .update({
+//     topScorers: firebase.firestore.FieldValue.arrayUnion("Crispo"),
+//   });
+
+// db.collection("teams")
+//   .doc("team2")
+//   .update({
+//     topScorers: firebase.firestore.FieldValue.arrayRemove("Puyol"),
+//   });
+
+// db.collection("teams")
+//   .doc("team2")
+//   .update({
+//     topScorers: firebase.firestore.FieldValue.arrayUnion("Deco"),
+//   });
+
+// added teams colors to existing documents
+
+// db.collection("teams")
+//   .doc("team1")
+//   .update({
+//     color: {
+//       home: "white",
+//       away: "black",
+//     },
+//   });
+
+// db.collection("teams")
+//   .doc("team2")
+//   .update({
+//     color: {
+//       home: "red",
+//       away: "gold",
+//     },
+//   });
+
+//   change team colors
+
+// db.collection("teams").doc("team1").update({
+//   "color.away": "purple",
+// });
+
+// db.collection("teams").doc("team2").update({
+//   "color.away": "pink",
+// });
