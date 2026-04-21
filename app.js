@@ -114,6 +114,7 @@
 //   });
 
 //  find all teams not in spain or england
+
 // db.collection("teams")
 //   .where("country", "not-in", ["Spain", "England"])
 //   .get()
@@ -123,6 +124,8 @@
 //       console.log(d.data());
 //     });
 //   });
+
+// added isNational field to existing documents
 
 // db.collection("teams").doc("team1").update({
 //   isNational: " Not National",
@@ -165,6 +168,7 @@
 //   });
 
 // find all teams in spain with more than 700 fans
+
 // db.collection("teams")
 //   .where("country", "in", ["Spain"])
 //   .where("worldwideFans", ">", 700)
@@ -177,6 +181,7 @@
 //   });
 
 // find all teams who fans range from 500-600
+
 // db.collection("teams")
 //   .where("worldwideFans", ">=", 500)
 //   .where("worldwideFans", "<=", 600)
@@ -189,6 +194,7 @@
 //   });
 
 // find all teams that contain Ronaldo as a top scorer
+
 // db.collection("teams")
 //   .where("topScorers", "array-contains", "Ronaldo")
 //   .get()
@@ -210,7 +216,7 @@
 //     });
 //   });
 
-// Update teams
+// Update team names and workwide fans
 
 // db.collection("teams").doc("team1").update({
 //   teamName: "Real Madrid FC",
@@ -222,7 +228,7 @@
 //   worldwideFans: 747,
 // });
 
-// Remove top scorers
+// Remove and add top scorers
 
 // db.collection("teams")
 //   .doc("team1")
