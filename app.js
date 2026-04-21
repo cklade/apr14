@@ -101,18 +101,6 @@
 //     });
 //   });
 
-//  find all national teams
-
-// db.collection("teams")
-//   .where("teamName", "contains", "National")
-//   .get()
-//   .then((data) => {
-//     let mydocs = data.docs;
-//     mydocs.forEach((d) => {
-//       console.log(d.data());
-//     });
-//   });
-
 // find all team not in spain
 
 // db.collection("teams")
@@ -136,10 +124,84 @@
 //     });
 //   });
 
+// db.collection("teams").doc("team1").update({
+//   isNational: " Not National",
+// });
+
+// db.collection("teams").doc("team2").update({
+//   isNational: " Not National",
+// });
+
+// db.collection("teams").doc("team3").update({
+//   isNational: " Not National",
+// });
+
+// db.collection("teams").doc("team4").update({
+//   isNational: " Not National",
+// });
+
+// db.collection("teams").doc("team5").update({
+//   isNational: "National",
+// });
+
+// db.collection("teams").doc("team6").update({
+//   isNational: "National",
+// });
+
+// db.collection("teams").doc("team7").update({
+//   isNational: " Not National",
+// });
+
+// find all national teams
+
+// db.collection("teams")
+//   .where("isNational", "==", "National")
+//   .get()
+//   .then((data) => {
+//     let mydocs = data.docs;
+//     mydocs.forEach((d) => {
+//       console.log(d.data());
+//     });
+//   });
+
 // find all teams in spain with more than 700 fans
 // db.collection("teams")
 //   .where("country", "in", ["Spain"])
 //   .where("worldwideFans", ">", 700)
+//   .get()
+//   .then((data) => {
+//     let mydocs = data.docs;
+//     mydocs.forEach((d) => {
+//       console.log(d.data());
+//     });
+//   });
+
+// find all teams who fans range from 500-600
+// db.collection("teams")
+//   .where("worldwideFans", ">=", 500)
+//   .where("worldwideFans", "<=", 600)
+//   .get()
+//   .then((data) => {
+//     let mydocs = data.docs;
+//     mydocs.forEach((d) => {
+//       console.log(d.data());
+//     });
+//   });
+
+// find all teams that contain Ronaldo as a top scorer
+// db.collection("teams")
+//   .where("topScorers", "array-contains", "Ronaldo")
+//   .get()
+//   .then((data) => {
+//     let mydocs = data.docs;
+//     mydocs.forEach((d) => {
+//       console.log(d.data());
+//     });
+//   });
+
+// Show all teams where Ronaldo, Maradona, or Messi is a top scorer
+// db.collection("teams")
+//   .where("topScorers", "array-contains-any", ["Ronaldo", "Maradona", "Messi"])
 //   .get()
 //   .then((data) => {
 //     let mydocs = data.docs;
